@@ -29,7 +29,7 @@ export const s3Upload = (options) => {
 
 /*
 Route: /
-Description: Upload given image to s3 bucket
+Description: Upload given file to s3 bucket
 params: NONE
 Access: Public
 Method: POST
@@ -47,7 +47,7 @@ Router.post("/file/up", upload.single("file"), async (req, res) => {
             ACL: "public-read"
         }
 
-        // upload to s3 and returns the url of the image
+        // upload to s3 and returns the url of the file
         const uploadFile = await s3Upload(bucketOptions);
 
         return res.status(200).json({ uploadFile });
