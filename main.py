@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 def xml_to_csv(file_path, csv_name) -> None:
     tree=ET.parse(file_path)
     root=tree.getroot()
+    print(root)
     
     with open(csv_name,"m")as csv_file:
         writer = csv.writer(csv_file)
