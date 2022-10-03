@@ -2,9 +2,6 @@
 import csv
 import xml.etree.ElementTree as ET
 
-# file_path="D:\Local disk(E)\SteelEye\DLTINS_20210117_01of01.xml"
-# csv_name="data.csv"
-
 def xml_to_csv(file_path, csv_name) -> None:
     tree=ET.parse(file_path)
     root=tree.getroot()
